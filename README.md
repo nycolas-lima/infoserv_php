@@ -1,12 +1,12 @@
 # TUTORIAL
 
-1- Entrar no github
-2- Abrir o Visual Studio e ver se ta logado na wsl (ubunto)
-3- Abrir a folder e colocar /var/www/html e dar ok
-4- No terminal dar um git clone com a url do repositório
-5- Abrir a folder e abrir /var/www/html/infoserv_php
+1. Entrar no GitHub
+2. Abrir o Visual Studio e ver se está logado na WSL (Ubuntu)
+3. Abrir a pasta (folder), colocar `/var/www/html` e dar OK
+4. No terminal, dar um `git clone` com a URL do repositório
+5. Abrir a pasta (folder) e abrir `/var/www/html/infoserv_php`
 
 # DICAS
 
-1- sudo service apache2 start (caso o servidor não esteja ativo)
-2- git add . , git commit -m "" , git push , para salvar os projetos no github
+* `sudo service apache2 start` (caso o servidor não esteja ativo)
+* `git add . && git commit -m "mensagem" && git push` (para salvar os projetos no GitHub)
