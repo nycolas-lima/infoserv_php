@@ -10,3 +10,4 @@
 
 * `sudo service apache2 start` (caso o servidor não esteja ativo)
 * `git add . && git commit -m "mensagem" && git push` (para salvar os projetos no GitHub)
+* `git pull` (para atualizar os projetos locais com as alterações do GitHub)
