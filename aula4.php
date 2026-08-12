@@ -27,3 +27,13 @@ while($contador <= 5) {
     echo $contador . "<br>";
     $contador++;
 }
+
+echo "<br>";
+
+$fatorial = 1;
+
+for($numero = 5; $numero > 0; $numero--) {
+    $fatorial = $fatorial * $numero;
+}
+
+echo $fatorial;

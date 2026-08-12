@@ -41,13 +41,3 @@ if ($resultado == 0) {
 } else {
     echo "é impar. " .  $numero;
 }
-
-echo "<br>";
-
-$fatorial = 1;
-
-for($numero = 5; $numero > 0; $numero--) {
-    $fatorial = $fatorial * $numero;
-}
-
-echo $fatorial;
