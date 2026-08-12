@@ -25,3 +25,26 @@ if ($perfil == "admin") {
 } else {
     echo "Perfil Desconhecido";
 }
+
+$numero = 10; // ler o numero do usuario (fixo || mock)
+
+/**
+ * Utilizar o operador modulo %
+ * Para descobrir se o numero informado pelo usuario é par
+ * se for par exibir é par e o numero lido, se nao exibir é impar e o numero lido.
+ */
+
+$resultado =  $numero % 2;
+
+if ($resultado == 0) {
+    echo "é par. " . $numero;
+} else {
+    echo "é impar. " .  $numero;
+}
+
+echo "<br>";
+
+for($numero = 5; $numero > 0; $numero--) {
+    $fatorial = 0; 
+    echo $numero . "<br>";
+}
