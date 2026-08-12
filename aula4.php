@@ -30,10 +30,8 @@ while($contador <= 5) {
 
 echo "<br>";
 
-$fatorial = 1;
-
-for($numero = 5; $numero > 0; $numero--) {
-    $fatorial = $fatorial * $numero;
+for($numero = 5, $fatorial = 1; $numero > 0; $numero--) {
+    $fatorial *= $numero;
 }
 
 echo $fatorial;
