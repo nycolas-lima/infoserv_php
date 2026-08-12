@@ -44,7 +44,10 @@ if ($resultado == 0) {
 
 echo "<br>";
 
+$fatorial = 1;
+
 for($numero = 5; $numero > 0; $numero--) {
-    $fatorial = 0; 
-    echo $numero . "<br>";
+    $fatorial = $fatorial * $numero;
 }
+
+echo $fatorial;
