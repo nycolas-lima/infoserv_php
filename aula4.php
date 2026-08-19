@@ -47,6 +47,11 @@ echo "<br>";
  * 5x10 = 50
  */
 
+for ($numero = 1, $contador = 5; $numero <= 10; $numero++) {
+    $resultado = $contador * $numero;
+     echo "$contador X $numero = $resultado <br>";
+}
+
 
 echo "<br>";
 
@@ -57,10 +62,24 @@ echo "<br>";
  * dica: utilizar formula do numeros pares.
  */
 
+for ($numero = 2; $numero <= 50; $numero++) {
+    $resto = $numero % 2;
+    $ehPar = $resto == 0;
+
+    if ($ehPar) {
+        echo "O $numero é par. <br>";
+    }
+}
+
 echo "<br>";
 
 /**
- * calcular e exibir os 5 primeiros numeros primos.
+ * Calcular e exibir os 5 primeiros numeros primos.
+ * Os 5 primeiros primos sao: 2, 3, 5, 7, 11.
  * 
- * dica: utilizar formula do numeros pares.
+ * Dica: utilizar formula do numeros pares.
+ * e uma vairavel $limitePrimos = 5.
+ * Serão 2 FOR um dentro do outro FOR
  */
+
+echo "<br>";
