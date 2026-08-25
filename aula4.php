@@ -83,27 +83,32 @@ echo "<br>";
  */
 
 $limitePrimos = 5;
-$quantidadePrimos = 0;
+$contadorLimitePrimos = 0;
 
-for ($numero = 2; $quantidadePrimos < $limitePrimos; $numero++) {
+for ($numeroAvaliado = 2; $contadorLimitePrimos < $limitePrimos; $numeroAvaliado++) {
 
     $ehPrimo = true;
+    $penultimoNumero = $numeroAvaliado - 1;
 
-    for ($divisor = 2; $divisor < $numero; $divisor++) {
-        $resto = $numero % $divisor;
-        $ehDivisivel = $resto == 0;
+    for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
 
-        if ($ehDivisivel) {
-            $ehPrimo = false;
+        $resto = $numeroAvaliado % $divisor;
+        $naoEhPrimo = $resto == 0;
+
+        if ($naoEhPrimo) {
+            $ehPrimo= false;
+
+            break;
         }
+
     }
 
-    if ($ehPrimo) {
-        echo "O $numero é primo. <br>";
-        $quantidadePrimos++;
+    if($ehPrimo) {
+        $contadorLimitePrimos++;
+        echo "O número $numeroAvaliado é primo.<br>";
     }
+
 }
 
 ?>
 
-echo "<br>";
