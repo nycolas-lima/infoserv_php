@@ -82,4 +82,28 @@ echo "<br>";
  * Serão 2 FOR um dentro do outro FOR
  */
 
+$limitePrimos = 5;
+$quantidadePrimos = 0;
+
+for ($numero = 2; $quantidadePrimos < $limitePrimos; $numero++) {
+
+    $ehPrimo = true;
+
+    for ($divisor = 2; $divisor < $numero; $divisor++) {
+        $resto = $numero % $divisor;
+        $ehDivisivel = $resto == 0;
+
+        if ($ehDivisivel) {
+            $ehPrimo = false;
+        }
+    }
+
+    if ($ehPrimo) {
+        echo "O $numero é primo. <br>";
+        $quantidadePrimos++;
+    }
+}
+
+?>
+
 echo "<br>";
