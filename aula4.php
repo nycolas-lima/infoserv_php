@@ -110,5 +110,51 @@ for ($numeroAvaliado = 2; $contadorLimitePrimos < $limitePrimos; $numeroAvaliado
 
 }
 
-?>
+$funcionarios = []; // array vazio
+$funcionarios = array(); // array vazio
+$numeros = [123, 25]; // tamanho 2
+            // 0, 1
+$funcionarios = ["Ariel", "Maria", "Joao"]; // 3
 
+foreach($funcionarios as $funcionario) {
+    echo $funcionario . "<br>";
+}
+
+echo "<br>";
+
+/**
+ * utilizar o array anterior e aplicar os itens abaixo:
+ * 
+ * conceder 10% de aumento pra cada funcionario.
+ * adicionar setor de funcionario.
+ * adicionar desconto do inss do funcionario.
+ */
+
+$funcionariosArrayAssociativo = [
+        "nome" => "Ariel",
+        "cargo" => "Professor",
+        "salario" => "5000",
+        "setor" => "educação",
+        "descontoINSS" => "230"
+];
+
+$percentual = 10;
+$percentualAumento = $percentual / 100;
+$salario = $funcionariosArrayAssociativo["salario"];
+$aumento = $salario * $percentualAumento;
+$aumentoFormat = formatarParaReal($aumento);
+$novoSalario =  formatarParaReal($salario + $aumento);
+$salarioAntigo = formatarParaReal($salario);
+
+echo "R$ ". formatarParaReal(10.49);
+echo "<br>";
+
+echo "O salário era de: $salarioAntigo o aumento foi de $aumentoFormat e seu novo salário é: $novoSalario";
+
+function formatarParaReal(float $valor): string {
+    $valorFormatado = number_format($valor, 2, ',', '.');
+
+    return $valorFormatado;
+}
+
+echo "<br>";
