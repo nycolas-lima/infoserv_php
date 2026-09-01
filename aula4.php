@@ -158,3 +158,158 @@ function formatarParaReal(float $valor): string {
 }
 
 echo "<br>";
+
+/**
+ * Refazer o exercício da calculadora utilizando funções
+ */
+
+function somar(float $a, float $b): float
+{
+    return $a + $b;
+}
+
+function subtrair(float $a, float $b): float
+{
+    return $a - $b;
+}
+
+function multiplicar(float $a, float $b): float
+{
+    return $a * $b;
+}
+
+function dividir(float $a, float $b): float
+{
+    return $a / $b;
+}
+
+$resultado = somar(10,5);
+
+echo "<br>";
+
+/**
+ * Refazer o exercicio da tabuada com funções
+ */
+
+function tabuada($numero, $limite = 10) {
+    for ($numero = 1, $contador = 5; $numero <= 10; $numero++) {
+        $resultado = $contador * $numero;
+        echo "$contador X $numero = $resultado <br>";
+    }
+}
+
+echo "<br>";
+
+/**
+ * Refazer o exercicio das medias com funções
+ */
+
+function mediaAritmetica($valor1, $valor2, $valor3){
+
+    $mediaAritmetica = ($valor1 + $valor2 + $valor3) / 3;
+
+    if ($mediaAritmetica >= 7) {
+        echo "O aluno foi aprovado com a média aritmetica: $mediaAritmetica";
+    } elseif ($mediaAritmetica >= 5) {
+        echo "O aluno está em recuperação com a média aritmetica: $mediaAritmetica";
+    } else {
+        echo "O aluno está reprovado com a média aritmetica: $mediaAritmetica";
+    }
+}
+
+ echo "<br>";
+$valor1 = 10;
+$valor2 = 10; 
+$valor3 = 10;
+mediaAritmetica($valor1, $valor2, $valor3);
+
+function mediaPonderada($prova1, $prova2, $prova3, $peso1, $peso2, $peso3){
+    $prova1 = 10;
+    $prova2 = 10;
+    $prova3 = 10;
+
+    $peso1 = 2;
+    $peso2 = 4;
+    $peso3 = 6;
+
+    $numerador = ($prova1 * $peso1) + ($prova2 * $peso2) + ($prova3 * $peso3);
+    $denominador = $peso1 + $peso2 + $peso3;
+
+    $mediaPonderada = $numerador / $denominador;
+
+    if ($mediaPonderada >= 7) {
+        echo "O aluno foi aprovado com a média ponderada: $mediaPonderada";
+    } elseif ($mediaPonderada >= 5) {
+        echo "O aluno está em recuperação com a média ponderada: $mediaPonderada";
+    } else {
+        echo "O aluno está reprovado com a média ponderada: $mediaPonderada";
+    }
+
+    echo "<br>";
+}
+
+$prova1 = 10;
+$prova2 = 10;
+$prova3 = 10;
+$peso1 = 2;
+$peso2 = 4;
+$peso3 = 6;
+mediaPonderada($prova1, $prova2, $prova3, $peso1, $peso2, $peso3);
+
+function mediaHarmonica($prova1, $prova2, $prova3, $numerador){
+    $denominador = (1 / $prova1) + (1 / $prova2) + (1 / $prova3);
+    $mediaHarmonica = $numerador / $denominador;
+
+    if ($mediaHarmonica >= 7) {
+        echo "O aluno foi aprovado com a média harmonica: $mediaHarmonica";
+    } elseif ($mediaHarmonica >= 5) {
+        echo "O aluno está em recuperação com a média harmonica: $mediaHarmonica";
+    } else {
+        echo "O aluno está reprovado com a média harmonica: $mediaHarmonica";
+    }
+}
+
+$prova1 = 10;
+$prova2 = 10;
+$prova3 = 10;
+$numerador = 3;
+mediaHarmonica($prova1, $prova2, $prova3, $numerador)
+
+/**
+ * Refazer o exercicio IMC com funções
+*/
+
+function calcularImc($peso, $altura){
+    $peso = 80;
+    $altura = 1.80;
+
+    $altura_quadrada = $altura * $altura;
+
+    $imc = $peso / $altura_quadrada; 
+
+    if ($imc < 18.5) {
+        echo "Abaixo do peso";
+    } elseif ($imc <= 24.9) {
+        echo "Peso ideal"; 
+    } else {
+        echo "Acima do peso";
+    }
+
+}
+
+$peso = 80;
+$altura = 1.80;
+
+echo "<br>";
+
+function calcularSalario($salario, $bonus, $desconto){
+    $salarioFinal = $salario + $bonus - $desconto;
+
+    echo "Salário final: R$ ". formatarParaReal($salarioFinal);
+}
+
+$salario = 2500;
+$bonus = 300;
+$desconto = 200;
+calcularSalario($salario, $bonus, $desconto);
+$salarioFinal = $salario + $bonus - $desconto;
