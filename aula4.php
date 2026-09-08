@@ -163,27 +163,50 @@ echo "<br>";
  * Refazer o exercício da calculadora utilizando funções
  */
 
-function somar(float $a, float $b): float
-{
-    return $a + $b;
-}
+$valor = 10;
+$operador = "+";
+$valor2 = 10;
+calculadora($valor, $operador , $valor2);
 
-function subtrair(float $a, float $b): float
-{
-    return $a - $b;
-}
+function calculadora($valor, $operador , $valor2) {
+    $resultado = 0;
 
-function multiplicar(float $a, float $b): float
-{
-    return $a * $b;
-}
+    function somar($valor, $valor2) {
+        return $valor + $valor2;
+    }
 
-function dividir(float $a, float $b): float
-{
-    return $a / $b;
-}
+    function subtrair($valor, $valor2) {
+        return $valor - $valor2;
+    }
 
-$resultado = somar(10,5);
+    function multiplicar($valor, $valor2) {
+        return $valor * $valor2;
+    }
+
+    function dividir($valor, $valor2) {
+        return $valor / $valor2;
+    }
+
+    if ($operador == "+") {
+        $resultado = somar($valor, $valor2);
+        echo "O resultado da operação de $operador é: $resultado";
+    }
+    else if ($operador == "-") {
+        $resultado = subtrair($valor, $valor2);
+        echo "O resultado da operação de $operador é: $resultado";
+    }
+    else if ($operador == "*") {
+        $resultado = multiplicar($valor, $valor2);
+        echo "O resultado da operação de $operador é: $resultado";
+    }
+    else if ($operador == "/") {
+        $resultado = dividir($valor, $valor2);
+        echo "O resultado da operação de $operador é: $resultado";
+    }
+    else {
+        echo "Operador inválido. Digite operador novamente";
+    }
+}
 
 echo "<br>";
 
@@ -191,86 +214,128 @@ echo "<br>";
  * Refazer o exercicio da tabuada com funções
  */
 
-function tabuada($numero, $limite = 10) {
-    for ($numero = 1, $contador = 5; $numero <= 10; $numero++) {
-        $resultado = $contador * $numero;
-        echo "$contador X $numero = $resultado <br>";
+function tabuada($numero, $limite = 10){
+    for ($i = 1; $i <= $limite; $i++) {
+        $resultado = $numero * $i;
+        echo "$numero X $i = $resultado <br>"; 
     }
 }
 
-echo "<br>";
+tabuada(5);
 
 /**
  * Refazer o exercicio das medias com funções
  */
 
-function mediaAritmetica($valor1, $valor2, $valor3){
+function mediaAritmetica($valor1, $valor2, $valor3) {
 
     $mediaAritmetica = ($valor1 + $valor2 + $valor3) / 3;
 
     if ($mediaAritmetica >= 7) {
-        echo "O aluno foi aprovado com a média aritmetica: $mediaAritmetica";
-    } elseif ($mediaAritmetica >= 5) {
-        echo "O aluno está em recuperação com a média aritmetica: $mediaAritmetica";
-    } else {
-        echo "O aluno está reprovado com a média aritmetica: $mediaAritmetica";
+        echo "O aluno foi Aprovado com a média aritmetica: $mediaAritmetica";
+    }
+    else if ($mediaAritmetica >= 5) {
+        echo "O aluno está em Recuperação com a média aritmetica: $mediaAritmetica";
+    }
+    else {
+        echo "O aluno está em Reprovado com a média aritmetica: $mediaAritmetica";
     }
 }
 
- echo "<br>";
 $valor1 = 10;
-$valor2 = 10; 
+$valor2 = 10;
 $valor3 = 10;
 mediaAritmetica($valor1, $valor2, $valor3);
 
-function mediaPonderada($prova1, $prova2, $prova3, $peso1, $peso2, $peso3){
-    $prova1 = 10;
-    $prova2 = 10;
-    $prova3 = 10;
+echo "<br>";
 
-    $peso1 = 2;
-    $peso2 = 4;
-    $peso3 = 6;
-
+function mediaPonderada($prova1, $prova2, $prova3, $peso1, $peso2, $peso3) {
     $numerador = ($prova1 * $peso1) + ($prova2 * $peso2) + ($prova3 * $peso3);
     $denominador = $peso1 + $peso2 + $peso3;
-
     $mediaPonderada = $numerador / $denominador;
 
     if ($mediaPonderada >= 7) {
-        echo "O aluno foi aprovado com a média ponderada: $mediaPonderada";
-    } elseif ($mediaPonderada >= 5) {
-        echo "O aluno está em recuperação com a média ponderada: $mediaPonderada";
-    } else {
-        echo "O aluno está reprovado com a média ponderada: $mediaPonderada";
+        echo "O aluno foi Aprovado com a média ponderada: $mediaPonderada";
     }
-
-    echo "<br>";
+    else if ($mediaPonderada >= 5) {
+        echo "O aluno está em Recuperação com a média ponderada: $mediaPonderada";
+    }
+    else {
+        echo "O aluno está em Reprovado com a média ponderada: $mediaPonderada";
+    }
 }
 
 $prova1 = 10;
 $prova2 = 10;
 $prova3 = 10;
+
 $peso1 = 2;
 $peso2 = 4;
 $peso3 = 6;
+
 mediaPonderada($prova1, $prova2, $prova3, $peso1, $peso2, $peso3);
 
-function mediaHarmonica($prova1, $prova2, $prova3, $numerador){
+echo "<br>";
+
+function mediaHarmonica($prova1, $prova2, $prova3, $numerador) {
     $denominador = (1 / $prova1) + (1 / $prova2) + (1 / $prova3);
     $mediaHarmonica = $numerador / $denominador;
 
     if ($mediaHarmonica >= 7) {
-        echo "O aluno foi aprovado com a média harmonica: $mediaHarmonica";
-    } elseif ($mediaHarmonica >= 5) {
-        echo "O aluno está em recuperação com a média harmonica: $mediaHarmonica";
-    } else {
-        echo "O aluno está reprovado com a média harmonica: $mediaHarmonica";
+        echo "O aluno foi Aprovado com a média harmonica: $mediaHarmonica";
+    }
+    else if ($mediaHarmonica >= 5) {
+        echo "O aluno está em Recuperação com a média harmonica: $mediaHarmonica";
+    }
+    else {
+        echo "O aluno está em Reprovado com a média harmonica: $mediaHarmonica";
     }
 }
 
 $prova1 = 10;
 $prova2 = 10;
 $prova3 = 10;
-$numerador = 3;
-mediaHarmonica($prova1, $prova2, $prova3, $numerador)
+
+$numerador = 3; // quantidade de provas
+
+mediaHarmonica($prova1, $prova2, $prova3, $numerador);
+
+echo "<br>";
+
+/**
+ * Refazer o exercicio IMC com funções
+ */
+
+function calcularIMC($peso, $altura) {
+    $imc = $peso / ($altura * $altura);
+
+    if ($imc >= 25) {
+        echo "Voce esta com sobrepeso(acima do peso).";
+    } else if ($imc >= 18.5 && $imc < 25 ) {
+        echo "Voce esta no peso ideal(normal).";
+    } else {
+        echo "Voce esta abaixo do peso(magreza).";
+    }
+}
+
+$altura = 1.88;
+$peso = 70;
+calcularIMC($peso, $altura);
+echo "<br>";
+
+/**
+ * Refazer o exercicio do calculo do salário com funções
+ */
+
+function calcularSalario($salario, $bonus, $desconto) {
+
+    $salarioFinal = $salario + $bonus - $desconto;
+    echo "O Salário final é R$ ". formatarParaReal($salarioFinal);
+
+}
+
+$salario = 2500;
+$bonus = 300;
+$desconto = 200;
+calcularSalario($salario, $bonus, $desconto);
+echo "<br>";
