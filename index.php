@@ -6,13 +6,13 @@
     <title>Sistema</title>
 </head>
 <body>
-    <h1>Sistema de Funcionários</h1>
+    <h1>Sistema de funcionários</h1>
     <ul>
         <li>
-            <a href="form-funcionario.php">Cadastrar funcionários</a>
+            <a href="form-funcionario.php">Cadastrar funcionário</a>
         </li>
         <li>
-            <a  href="form-funcionario.php">Listar funcionários</a>
+            <a href="listar-funcionarios.php">Listar funcionários</a>
         </li>
     </ul>
     
