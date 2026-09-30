@@ -37,10 +37,11 @@ $resultado = $conexao->query($sql);
     <?php
         while($funcionario = $resultado->fetch_assoc()) {
             $objFuncionario = (object) $funcionario; // $funcionario["nome"] -> $funcionario->nome
+            $idFuncionario = $objFuncionario->id;
     ?>
 
     <tr>
-        <td><?=  $objFuncionario->id ?></td>
+        <td><?php echo $idFuncionario ?></td>
         <td><?=  $objFuncionario->nome ?></td>
         <td><?=  $objFuncionario->sobrenome ?></td>
         <td><?=  $objFuncionario->salario ?></td>
@@ -48,8 +49,8 @@ $resultado = $conexao->query($sql);
         <td><?=  $objFuncionario->setor ?></td>
         <td><?=  $objFuncionario->cracha ?></td>
         <td>
-            <a href="">Editar</a>
-            <a href="">Excluir</a>
+            <a href="editar-funcionario.php?id=<?php echo $idFuncionario?>">Editar</a>
+            <a href="deletar-funcionario.php?id=<?=  $idFuncionario?>">Excluir</a>
         </td>
     </tr>
 
