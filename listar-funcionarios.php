@@ -49,8 +49,8 @@ $resultado = $conexao->query($sql);
         <td><?=  $objFuncionario->setor ?></td>
         <td><?=  $objFuncionario->cracha ?></td>
         <td>
-            <a href="editar-funcionario.php?id=<?php echo $idFuncionario?>">Editar</a>
-            <a href="deletar-funcionario.php?id=<?=  $idFuncionario?>">Excluir</a>
+            <a href="editar-funcionario.php?id=<?php echo $idFuncionario ?>">Editar</a>
+            <a href="deletar-funcionario.php?id=<?= $idFuncionario ?>">Excluir</a>
         </td>
     </tr>
 
