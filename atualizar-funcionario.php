@@ -3,6 +3,12 @@
 require_once "./conexao.php";
 
 $idFuncionario = $_REQUEST["id"] ?? 0;
+$nome = $_REQUEST["nome"] ?? "";
+$sobrenome = $_REQUEST["sobrenome"] ?? "";
+$salario = $_REQUEST["salario"] ?? 0;
+$cargo = $_REQUEST["cargo"] ?? "";
+$setor = $_REQUEST["setor"] ?? "";
+$cracha = $_REQUEST["cracha"] ?? "";
 
 if (empty($idFuncionario)) {
     retornarParaListagem();
@@ -23,15 +29,13 @@ if (empty($sobrenome)) {
 }
 
 $sql = "UPDATE funcionario SET ";
-$camposUpdate = "nome='$nome' ";
+$camposUpdate = "nome='$nome', sobrenome='$sobrenome', salario=$salario, cargo='$cargo', setor='$setor', cracha='$cracha' ";
 $where = "WHERE id=$idFuncionario LIMIT 1;";
 
 $sql .= $camposUpdate;
 $sql .= $where;
 
 $resultado = $conexao->query($sql);
-
-$funcionario = (object) $resultado->fetch_assoc() ?? null;
 
 retornarParaListagem();
 
