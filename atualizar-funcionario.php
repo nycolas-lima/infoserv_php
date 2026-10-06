@@ -14,12 +14,27 @@ if (empty($idFuncionario)) {
     retornarParaListagem();
 }
 
-
 if (empty($nome)) {
     retornarParaListagem();
 }
 
 if (empty($sobrenome)) {
+    retornarParaListagem();
+}
+
+if (empty($cargo)) {
+    retornarParaListagem();
+}
+
+if (empty($setor)) {
+    retornarParaListagem();
+}
+
+if (empty($salario)) {
+    retornarParaListagem();
+}
+
+if (empty($cracha)) {
     retornarParaListagem();
 }
 
@@ -36,5 +51,9 @@ $sql .= $where;
 
 $resultado = $conexao->query($sql);
 
-header("Location: listar-funcionarios.php");
-exit;
+retornarParaListagem();
+
+function retornarParaListagem() {
+    header("Location: listar-funcionarios.php");
+    exit;
+}
