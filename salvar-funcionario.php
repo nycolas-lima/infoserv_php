@@ -2,17 +2,12 @@
 
 require_once "./conexao.php";
 
-$idFuncionario = $_POST["id"] ?? 0;
 $nome = $_POST["nome"] ?? "";
 $sobrenome = $_POST["sobrenome"] ?? "";
 $cargo = $_POST["cargo"] ?? "";
 $setor = $_POST["setor"] ?? "";
 $salario = $_POST["salario"] ?? "";
 $cracha = $_POST["cracha"] ?? "";
-
-if (empty($idFuncionario)) {
-    retornarParaListagem();
-}
 
 if (empty($nome)) {
     retornarParaListagem();
