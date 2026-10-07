@@ -16,7 +16,7 @@ $encontrouFuncionario = $funcionario->nome ?? "";
 
 <h1>Editar Funcionário</h1>
 
-<br><br>
+<br>
 
 <?php 
     if (empty($encontrouFuncionario)) {
@@ -26,16 +26,50 @@ $encontrouFuncionario = $funcionario->nome ?? "";
 
  <?php } else { ?>
     <form method="POST" action="atualizar-funcionario.php">
-        <input type="text" readonly name="id" value="<?= $idFuncionario  ?>">
-        <input type="text" name="nome" id="nome" value="<?=  $funcionario->nome ?>">
-        <input type="text" name="sobrenome" id="sobrenome" value="<?=  $funcionario->sobrenome ?>">
-        <input type="text" name="cargo" id="cargo" value="<?=  $funcionario->cargo ?>">
-        <input type="text" name="setor" id="setor" value="<?=  $funcionario->setor ?>">
-        <input type="text" name="salario" id="salario" value="<?=  $funcionario->salario ?>">
-        <input type="text" name="cracha" id="cracha" value="<?=  $funcionario->cracha ?>">
+        <div>
+            <label for="id" class="form-label">ID</label>
+            <input type="text" name="id" id="id" readonly aria-readonly="true" value="<?=  $funcionario->id ?>">
+        </div>
+        <br>
 
-        <br><br>
+        <div>
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" name="nome" id="nome" value="<?=  $funcionario->nome ?>">
+        </div>
+        <br>
+
+        <div>
+            <label for="sobrenome">Sobrenome</label>
+            <input class="form-control" type="text" name="sobrenome" id="sobrenome" value="<?=  $funcionario->sobrenome ?>">
+        </div>
+        <br>
+
+        <div>
+            <label for="cargo">Cargo</label>
+            <input class="form-control" type="text" name="cargo" id="cargo" value="<?=  $funcionario->cargo ?>">
+        </div>
+        <br>
+
+        <div>
+            <label for="setor">Setor</label>
+            <input class="form-control" type="text" name="setor" id="setor" value="<?=  $funcionario->setor ?>">
+        </div>
+        <br>
+
+        <div>
+            <label for="salario">Salário</label>
+            <input class="form-control" type="text" name="salario" id="salario" value="<?=  $funcionario->salario ?>">
+        </div>
+        <br>
+
+        <div>
+            <label for="cracha">Crachá</label>
+            <input class="form-control" type="text" name="cracha" id="cracha" value="<?=  $funcionario->cracha ?>">
+        </div>
+        <br>
         
-        <button type="submit">Atualizar</button>
+        <div>
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
     </form>
  <?php } ?>

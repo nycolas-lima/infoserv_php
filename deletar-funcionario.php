@@ -4,7 +4,7 @@ require_once "./conexao.php";
 
 $idFuncionario = $_REQUEST["id"] ?? 0;
 
-if (empty($idFuncionario)) {
+if (empty($idFuncionario )) {
     retornarParaListagem();
 }
 

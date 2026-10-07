@@ -18,7 +18,7 @@ $resultado = $conexao->query($sql);
     if (empty($resultado)) {
  ?>
  
- <p>Sem dados para exibir.</p>
+ <p><b>Sem dados para exibir.</b></p>
 
  <?php } else { ?>
 

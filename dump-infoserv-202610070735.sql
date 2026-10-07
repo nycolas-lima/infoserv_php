@@ -31,11 +31,11 @@ CREATE TABLE `funcionario` (
   `cargo` varchar(100) NOT NULL,
   `setor` varchar(100) NOT NULL,
   `cracha` varchar(50) NOT NULL,
-  `idPessoa` smallint(6) NOT NULL,
+  `idPessoa` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `funcionario_pessoa_FK` (`idPessoa`),
   CONSTRAINT `funcionario_pessoa_FK` FOREIGN KEY (`idPessoa`) REFERENCES `pessoa` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,8 @@ INSERT INTO `funcionario` VALUES
 (2,'Ariel','Felippi',5000,'Professor','Tecnologia','1233',1),
 (3,'Maria','Silva',4000,'Funcionária','Tecnologia','1234',2),
 (5,'Lucas','Alves',3500,'Aluno','Medicina','1235',3),
-(6,'Joana','Carvalho',7800,'Aluna','Medicina','1236',4);
+(6,'Joana','Carvalho',7800,'Aluna','Medicina','1236',4),
+(7,'Pedro','Rocha',2500,'Instrutor','Administração','7891',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-10-04 15:42:31
+-- Dump completed on 2026-10-07  7:35:15

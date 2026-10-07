@@ -43,7 +43,7 @@ if (empty($cracha)) {
  */
 
 $sql = "UPDATE funcionario SET "; 
-$camposUpdate = "nome='$nome', sobrenome='$sobrenome', salario='$salario, cargo='$cargo', setor='$setor', salario='$salario', cracha='$cracha' ";
+$camposUpdate = "nome='$nome', sobrenome='$sobrenome', salario='$salario', cargo='$cargo', setor='$setor', cracha='$cracha' ";
 $where = "WHERE id=$idFuncionario LIMIT 1;";
 
 $sql .= $camposUpdate;

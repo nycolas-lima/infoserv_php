@@ -39,6 +39,12 @@ $valores = "VALUES ('$nome', '$sobrenome', '$salario', '$cargo', '$setor', '$cra
 
 $sql .= $campos . $valores;
 
+/**
+ * INSERT INTO funcionario
+ * ( nome, sobrenome, salario, cargo, setor, cracha, idPessoa)
+ * VALUES('', '', 0, '', '', '', NULL);
+ */
+
 $resultado = $conexao->query($sql);
 
 retornarParaListagem();
@@ -47,3 +53,5 @@ function retornarParaListagem() {
     header("Location: listar-funcionarios.php");
     exit;
 }
+
+ // http://localhost/infoserv_php/listar-funcionarios.php
