@@ -7,4 +7,8 @@ class FuncionarioController {
     {
         $this->funcionarioModel = $funcionarioModel;
     }
+
+    public function listar($filtros = []) {
+        return $this->funcionarioModel->listar($filtros);
+    }
 }
