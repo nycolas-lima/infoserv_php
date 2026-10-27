@@ -9,6 +9,7 @@ git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e
 # Configurar apache para aceitar rotas
 - Editar o arquivo
 ```bash
+sudo cp -R /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf-bkp
 sudo vim /etc/apache2/sites-available/000-default.conf
 ```
 
@@ -20,13 +21,18 @@ sudo vim /etc/apache2/sites-available/000-default.conf
    <VirtualHost *:80>
       ServerName localhost
       ServerAlias localhost
+      ServerAdmin webmaster@localhost
       DocumentRoot "/var/www/html"
       <Directory "/var/www/html/">
          Options +Indexes +Includes +FollowSymLinks +MultiViews
          AllowOverride All
          Require all granted
       </Directory>
+      #LogLevel info ssl:warn
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
    </VirtualHost>
+   # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
 - Para sair do editor VIM pressionar `ESC` seguido de `:wq!`
@@ -47,9 +53,15 @@ sudo vim /etc/apache2/sites-available/000-default.conf
 # MariaDB
 
 ## Executar no terminal os comandos abaixo
-sudo service mariadb start
 
-sudo mysql -uroot -p
+### Iniciar serviço do banco
+`sudo service mariadb start`
+
+### Acessar o banco mariadb/mysql
+`sudo mysql -uroot -p`
+
+
+### Executar no terminal os comandos abaixo
 
 ```BASH
    CREATE database infoserv;
