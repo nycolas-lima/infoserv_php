@@ -6,6 +6,8 @@ return [
         echo "<a href='" . url("/funcionarios") . "'>Funcionários</a>";
         echo "<br>";
         echo "<a href='" . url("/pessoas") . "'>Pessoas</a>";
+        echo "<br>";
+        echo "<a href='" . url("/usuarios") . "'>Usuarios</a>";
     }],
 
     ['GET', '/funcionarios', [$funcionarioController, 'listar']],
@@ -21,4 +23,11 @@ return [
     ['GET', '/pessoas/{id}/editar', [$pessoaController, 'editar']],
     ['POST', '/pessoas/{id}', [$pessoaController, 'atualizar']],
     ['POST', '/pessoas/{id}/deletar', [$pessoaController, 'deletar']],
+
+    ['GET', '/usuarios', [$usuarioController, 'listar']],
+    ['GET', '/usuarios/novo', [$usuarioController, 'novo']],
+    ['POST', '/usuarios', [$usuarioController, 'criar']],
+    ['GET', '/usuarios/{id}/editar', [$usuarioController, 'editar']],
+    ['POST', '/usuarios/{id}', [$usuarioController, 'atualizar']],
+    ['POST', '/usuarios/{id}/deletar', [$usuarioController, 'deletar']],
 ];
