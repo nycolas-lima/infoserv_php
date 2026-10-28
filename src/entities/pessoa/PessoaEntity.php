@@ -53,12 +53,12 @@ class PessoaEntity
         return $this->sobrenome;
     }
 
-    public function getSalario(): float
+    public function getEmail(): string
     {
         return $this->email;
     }
 
-    public function getCargo(): string
+    public function getTelefone(): float
     {
         return $this->telefone;
     }

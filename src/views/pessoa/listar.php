@@ -2,7 +2,7 @@
 
 <?php renderizarFlashMessages(); ?>
 
-<a href="<?= url("/pessoa/novo") ?>">Nova pessoa</a>
+<a href="<?= url("/pessoas/nova") ?>">Nova pessoa</a>
 
 <br><br>
 
@@ -26,13 +26,13 @@
                 <td><?= escapar($pessoa->getEmail()) ?></td>
                 <td><?= escapar($pessoa->getTelefone()) ?></td>
                 <td>
-                    <a href="<?= url("/pessoa/{$pessoa->getId()}/editar") ?>">
+                    <a href="<?= url("/pessoas/{$pessoa->getId()}/editar") ?>">
                         Editar
                     </a>
 
                     <form
                         method="POST"
-                        action="<?= url("/pessoa/{$pessoa->getId()}/deletar") ?>"
+                        action="<?= url("/pessoas/{$pessoa->getId()}/deletar") ?>"
                         style="display:inline"
                     >
                         <button type="submit">Excluir</button>

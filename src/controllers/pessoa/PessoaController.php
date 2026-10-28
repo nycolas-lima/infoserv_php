@@ -31,7 +31,7 @@ class PessoaController extends BaseController
         $this->view("pessoa/form", [
             "titulo" => "Nova pessoa",
             "action" => url("/pessoas"),
-            "funcionario" => new PessoaEntity(),
+            "pessoa" => new PessoaEntity(),
         ]);
     }
 
