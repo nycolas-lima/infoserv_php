@@ -4,6 +4,7 @@ return [
     ['GET', '/', function () {
         echo "<h1>Página inicial</h1>";
         echo "<a href='" . url("/funcionarios") . "'>Funcionários</a>";
+        echo "<br>";
         echo "<a href='" . url("/pessoas") . "'>Pessoas</a>";
     }],
 
@@ -14,10 +15,10 @@ return [
     ['POST', '/funcionarios/{id}', [$funcionarioController, 'atualizar']],
     ['POST', '/funcionarios/{id}/deletar', [$funcionarioController, 'deletar']],
 
-    ['GET', '/pessoa', [$pessoaController, 'listar']],
-    ['GET', '/pessoa/nova', [$pessoaController, 'novo']],
-    ['POST', '/pessoa', [$pessoaController, 'criar']],
-    ['GET', '/pessoa/{id}/editar', [$pessoaController, 'editar']],
-    ['POST', '/pessoa/{id}', [$pessoaController, 'atualizar']],
-    ['POST', '/pessoa/{id}/deletar', [$pessoaController, 'deletar']],
+    ['GET', '/pessoas', [$pessoaController, 'listar']],
+    ['GET', '/pessoas/nova', [$pessoaController, 'novo']],
+    ['POST', '/pessoas', [$pessoaController, 'criar']],
+    ['GET', '/pessoas/{id}/editar', [$pessoaController, 'editar']],
+    ['POST', '/pessoas/{id}', [$pessoaController, 'atualizar']],
+    ['POST', '/pessoas/{id}/deletar', [$pessoaController, 'deletar']],
 ];
