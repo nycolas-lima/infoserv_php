@@ -8,12 +8,15 @@ spl_autoload_register(function (string $nomeDaClasse): void {
         APP_PATH . "/controllers/",
         APP_PATH . "/controllers/funcionario",
         APP_PATH . "/controllers/pessoa",
+        APP_PATH . "/controllers/usuario",
 
         APP_PATH . "/entities/funcionario",
         APP_PATH . "/entities/pessoa",
+        APP_PATH . "/entities/usuario",
 
         APP_PATH . "/models/funcionario",
         APP_PATH . "/models/pessoa",
+        APP_PATH . "/models/usuario",
     ];
 
     foreach ($pastas as $pasta) {
