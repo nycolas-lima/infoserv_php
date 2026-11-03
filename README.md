@@ -35,15 +35,14 @@ sudo vim /etc/apache2/sites-available/000-default.conf
    # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-- Esc - garante que está no modo normal.
-- gg - vai para o inicio do arquivo.
-- dG - apaga tudo até o final.
-- i - entra no modo de inserção.
-- Ctrl + Shift + V - colar conteúdo.
-- Esc - volta ao modo normal.
-- :wq - salva e sai.
+- `Esc` - garante que está no modo normal.
+- `gg` - vai para o inicio do arquivo.
+- `dG` - apaga tudo até o final.
+- `i` - entra no modo de inserção.
+- `Ctrl` + Shift + V - colar conteúdo.
+- `Esc` - volta ao modo normal.
+- `:wq` - salva e sai.
 
-- Para sair do editor VIM pressionar `ESC` seguido de `:wq!`
 - Executar o comando:
 ```bash
    sudo a2enmod rewrite
