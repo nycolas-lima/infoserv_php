@@ -39,7 +39,7 @@ sudo vim /etc/apache2/sites-available/000-default.conf
 - `gg` - vai para o inicio do arquivo.
 - `dG` - apaga tudo até o final.
 - `i` - entra no modo de inserção.
-- `Ctrl` + Shift + V - colar conteúdo.
+- `Ctrl + Shift + V`  - colar conteúdo.
 - `Esc` - volta ao modo normal.
 - `:wq` - salva e sai.
 

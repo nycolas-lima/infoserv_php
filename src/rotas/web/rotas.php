@@ -1,14 +1,8 @@
 <?php
 
 return [
-    ['GET', '/', function () {
-        echo "<h1>Página inicial</h1>";
-        echo "<a href='" . url("/funcionarios") . "'>Funcionários</a>";
-        echo "<br>";
-        echo "<a href='" . url("/pessoas") . "'>Pessoas</a>";
-        echo "<br>";
-        echo "<a href='" . url("/usuarios") . "'>Usuarios</a>";
-    }],
+
+    ['GET', '/', [$homeController, 'listar']],
 
     ['GET', '/funcionarios', [$funcionarioController, 'listar']],
     ['GET', '/funcionarios/novo', [$funcionarioController, 'novo']],

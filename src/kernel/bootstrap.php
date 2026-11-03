@@ -21,6 +21,8 @@ require_once APP_PATH . "/controllers/pessoa/PessoaController.php";
 require_once APP_PATH . "/models/usuario/UsuarioModel.php";
 require_once APP_PATH . "/controllers/usuario/UsuarioController.php";
 
+$homeController = new HomeController();
+
 $bancoDeDados = new BancoDeDados($conexao);
 
 $funcionarioModel = new FuncionarioModel($bancoDeDados);
