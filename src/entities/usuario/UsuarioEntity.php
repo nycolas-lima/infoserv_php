@@ -3,13 +3,10 @@
 class UsuarioEntity
 {
     private ?int $id = null;
-    private string $nome = "";
-    private string $sobrenome = "";
-    private float $salario = 0;
-    private string $cargo = "";
-    private string $setor = "";
-    private string $cracha = "";
-    private ?int $idPessoa = null;
+    private string $nomeDeUsuario = "";
+    private string $senha = "";
+    private float $status = 0;
+    private float $cadastroCompleto = 0;
 
     public static function criarPorDados(object|array $dados): self
     {
@@ -25,25 +22,19 @@ class UsuarioEntity
         $dados = (object) $dados;
 
         $this->id = isset($dados->id) ? (int) $dados->id : $this->id;
-        $this->nome = $dados->nome ?? $this->nome;
-        $this->sobrenome = $dados->sobrenome ?? $this->sobrenome;
-        $this->salario = isset($dados->salario) && $dados->salario !== "" ? (float) $dados->salario : $this->salario;
-        $this->cargo = $dados->cargo ?? $this->cargo;
-        $this->setor = $dados->setor ?? $this->setor;
-        $this->cracha = $dados->cracha ?? $this->cracha;
-        $this->idPessoa = isset($dados->idPessoa) && $dados->idPessoa !== "" ? (int) $dados->idPessoa : $this->idPessoa;
+        $this->nomeDeUsuario = $dados->nomeDeUsuario ?? $this->nomeDeUsuario;
+        $this->senha = $dados->senha ?? $this->senha;
+        $this->status = isset($dados->status) && $dados->status !== "" ? (float) $dados->status : $this->status;
+        $this->cadastroCompleto = isset($dados->cadastroCompleto) && $dados->cadastroCompleto !== "" ? (float) $dados->cadastroCompleto : $this->cadastroCompleto;
     }
 
     public function toArrayParaBanco(): array
     {
         return [
-            "nome" => $this->nome,
-            "sobrenome" => $this->sobrenome,
-            "salario" => $this->salario,
-            "cargo" => $this->cargo,
-            "setor" => $this->setor,
-            "cracha" => $this->cracha,
-            "idPessoa" => $this->idPessoa,
+            "nomeDeUsuario" => $this->nomeDeUsuario,
+            "senha" => $this->senha,
+            "status" => $this->status,
+            "cadastroCompleto" => $this->cadastroCompleto,
         ];
     }
 
@@ -52,38 +43,23 @@ class UsuarioEntity
         return $this->id;
     }
 
-    public function getNome(): string
+    public function getNomeDeUsuario(): string
     {
-        return $this->nome;
+        return $this->nomeDeUsuario;
     }
 
-    public function getSobrenome(): string
+    public function getSenha(): string
     {
-        return $this->sobrenome;
+        return $this->senha;
     }
 
-    public function getSalario(): float
+    public function getStatus(): float
     {
-        return $this->salario;
+        return $this->status;
     }
 
-    public function getCargo(): string
+    public function getCadastroCompleto(): float
     {
-        return $this->cargo;
-    }
-
-    public function getSetor(): string
-    {
-        return $this->setor;
-    }
-
-    public function getCracha(): string
-    {
-        return $this->cracha;
-    }
-
-    public function getIdPessoa(): ?int
-    {
-        return $this->idPessoa;
+        return $this->cadastroCompleto;
     }
 }

@@ -12,26 +12,20 @@
     <table border="1" cellpadding="8">
         <tr>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Cargo</th>
-            <th>Setor</th>
-            <th>Salário</th>
-            <th>Crachá</th>
-            <th>ID Pessoa</th>
+            <th>Nome de Usuário</th>
+            <th>Senha</th>
+            <th>Status</th>
+            <th>Cadastro Completo</th>
             <th>Ações</th>
         </tr>
 
         <?php foreach ($usuarios as $usuario): ?>
             <tr>
                 <td><?= escapar($usuario->getId()) ?></td>
-                <td><?= escapar($usuario->getNome()) ?></td>
-                <td><?= escapar($usuario->getSobrenome()) ?></td>
-                <td><?= escapar($usuario->getCargo()) ?></td>
-                <td><?= escapar($usuario->getSetor()) ?></td>
-                <td><?= escapar($usuario->getSalario()) ?></td>
-                <td><?= escapar($usuario->getCracha()) ?></td>
-                <td><?= escapar($usuario->getIdPessoa()) ?></td>
+                <td><?= escapar($usuario->getNomeDeUsuario()) ?></td>
+                <td><?= escapar($usuario->getSenha()) ?></td>
+                <td><?= escapar($usuario->getStatus()) ?></td>
+                <td><?= escapar($usuario->getCadastroCompleto()) ?></td>
                 <td>
                     <a href="<?= url("/usuarios/{$usuario->getId()}/editar") ?>">
                         Editar
