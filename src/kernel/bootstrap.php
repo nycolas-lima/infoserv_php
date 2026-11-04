@@ -10,7 +10,7 @@ require_once APP_PATH . "/kernel/helpers.php";
 require_once APP_PATH . "/kernel/autoload.php";
 require_once APP_PATH . "/config/conexao.php";
 
-// require_once APP_PATH . "/database/BancoDeDados.php";
+// require_once APP_PATH . "/database/BancoDeDados.php"; .
 // require_once APP_PATH . "/database/BaseModel.php";
 
 // require_once APP_PATH . "/models/funcionario/FuncionarioModel.php";
