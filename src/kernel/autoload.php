@@ -22,6 +22,8 @@ spl_autoload_register(function (string $nomeDaClasse): void {
     foreach ($pastas as $pasta) {
         $caminhoArquivo = $pasta . "/" . $nomeDaClasse . ".php";
 
+        // var_dump($caminhoArquivo);
+
         if (file_exists($caminhoArquivo)) {
             require_once $caminhoArquivo;
             return;
