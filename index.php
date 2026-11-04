@@ -1,5 +1,8 @@
 <?php
 
+define("ROOT_PATH", dirname(__DIR__, 2)); // /var/www/html/infoserv
+define("APP_PATH", ROOT_PATH . "/src"); // /var/www/html/infoserv/src
+
 require_once __DIR__ . "/src/kernel/bootstrap.php";
 
 $rotas = require APP_PATH . "/rotas/web/rotas.php";
