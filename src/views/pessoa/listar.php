@@ -16,6 +16,7 @@
             <th>Sobrenome</th>
             <th>Email</th>
             <th>Telefone</th>
+            <th>Ações</th>
         </tr>
 
         <?php foreach ($pessoas as $pessoa): ?>

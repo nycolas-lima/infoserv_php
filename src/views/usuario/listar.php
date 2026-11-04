@@ -16,6 +16,7 @@
             <th>Senha</th>
             <th>Status</th>
             <th>Cadastro Completo</th>
+            <th>Ações</th>
         </tr>
 
         <?php foreach ($usuarios as $usuario): ?>

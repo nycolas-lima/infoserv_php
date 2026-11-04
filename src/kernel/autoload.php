@@ -5,7 +5,7 @@ spl_autoload_register(function (string $nomeDaClasse): void {
         APP_PATH . "/kernel",
         APP_PATH . "/database",
 
-        APP_PATH . "/controllers/",
+        APP_PATH . "/controllers",
         APP_PATH . "/controllers/funcionario",
         APP_PATH . "/controllers/pessoa",
         APP_PATH . "/controllers/usuario",

@@ -9,17 +9,18 @@ require_once APP_PATH . "/config/app.php";
 require_once APP_PATH . "/kernel/helpers.php";
 require_once APP_PATH . "/kernel/autoload.php";
 require_once APP_PATH . "/config/conexao.php";
-require_once APP_PATH . "/database/BancoDeDados.php";
-require_once APP_PATH . "/database/BaseModel.php";
 
-require_once APP_PATH . "/models/funcionario/FuncionarioModel.php";
-require_once APP_PATH . "/controllers/funcionario/FuncionarioController.php";
+//require_once APP_PATH . "/database/BancoDeDados.php";
+//require_once APP_PATH . "/database/BaseModel.php";
 
-require_once APP_PATH . "/models/pessoa/PessoaModel.php";
-require_once APP_PATH . "/controllers/pessoa/PessoaController.php";
+//require_once APP_PATH . "/models/funcionario/FuncionarioModel.php";
+//require_once APP_PATH . "/controllers/funcionario/FuncionarioController.php";
 
-require_once APP_PATH . "/models/usuario/UsuarioModel.php";
-require_once APP_PATH . "/controllers/usuario/UsuarioController.php";
+//require_once APP_PATH . "/models/pessoa/PessoaModel.php";
+//require_once APP_PATH . "/controllers/pessoa/PessoaController.php";
+
+//require_once APP_PATH . "/models/usuario/UsuarioModel.php";
+//require_once APP_PATH . "/controllers/usuario/UsuarioController.php";
 
 $homeController = new HomeController();
 
