@@ -12,6 +12,8 @@ $homeController = new HomeController();
 
 $bancoDeDados = new BancoDeDados($conexao);
 
+$loginController = new LoginController();
+
 $funcionarioModel = new FuncionarioModel($bancoDeDados);
 $funcionarioController = new FuncionarioController($funcionarioModel);
 

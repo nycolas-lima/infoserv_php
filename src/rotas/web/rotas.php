@@ -4,6 +4,8 @@ return [
 
     ['GET', '/', [$homeController, 'listar']],
 
+    ['GET', '/login', [$loginController, 'listar']],
+
     ['GET', '/funcionarios', [$funcionarioController, 'listar']],
     ['GET', '/funcionarios/novo', [$funcionarioController, 'novo']],
     ['POST', '/funcionarios', [$funcionarioController, 'criar']],
