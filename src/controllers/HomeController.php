@@ -10,7 +10,7 @@ class HomeController extends BaseController
             "usuarios" => "Usuários"
         ];
 
-        $this->view("home", [
+        $this->view("welcome", [
             "dados" => $dados,
         ]);
     }
