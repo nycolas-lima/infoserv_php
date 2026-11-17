@@ -18,18 +18,24 @@ class PessoaController extends BaseController
         } catch (Exception $erro) {
             $pessoas = [];
 
-            $this->mensagemErro("Erro ao listar as pessoas: " . $erro->getMessage());
+            $this->mensagemErro("Erro ao listar pessoas: " . $erro->getMessage());
         }
 
-        $this->view("pessoa/listar", [
-            "pessoas" => $pessoas,
-        ]);
+        $dados["pagina"] = "pessoa/listar";
+        $dados["titulo"] = "Sistema Infoserv - Pessoas";
+        $dados["dados"] = $pessoas;
+
+        $this->view("principal", $dados);
+
+        // $this->view("pessoa/listar", [
+        //     "pessoas" => $pessoas,
+        // ]);
     }
 
     public function novo(): void
     {
         $this->view("pessoa/form", [
-            "titulo" => "Nova pessoa",
+            "titulo" => "Nova Pessoa",
             "action" => url("/pessoas"),
             "pessoa" => new PessoaEntity(),
         ]);
@@ -46,7 +52,7 @@ class PessoaController extends BaseController
 
             $this->redirecionar("/pessoas");
         } catch (Exception $erro) {
-            $this->mensagemErro("Erro ao cadastrar a pessoa: " . $erro->getMessage());
+            $this->mensagemErro("Erro ao cadastrar pessoa: " . $erro->getMessage());
 
             $this->redirecionar("/pessoas/novo");
         }

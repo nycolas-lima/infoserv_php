@@ -21,9 +21,15 @@ class UsuarioController extends BaseController
             $this->mensagemErro("Erro ao listar usuários: " . $erro->getMessage());
         }
 
-        $this->view("usuario/listar", [
-            "usuarios" => $usuarios,
-        ]);
+        $dados["pagina"] = "usuario/listar";
+        $dados["titulo"] = "Sistema Infoserv - Usuários";
+        $dados["dados"] = $usuarios;
+
+        $this->view("principal", $dados);
+
+        // $this->view("usuario/listar", [
+        //     "usuarios" => $usuarios,
+        // ]);
     }
 
     public function novo(): void

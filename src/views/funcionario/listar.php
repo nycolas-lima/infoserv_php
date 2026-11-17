@@ -6,7 +6,7 @@
 
 <br><br>
 
-<?php if (empty($funcionarios)): ?>
+<?php if (empty($dados)): ?>
     <p>Nenhum funcionário encontrado.</p>
 <?php else: ?>
     <table border="1" cellpadding="8">
@@ -22,7 +22,7 @@
             <th>Ações</th>
         </tr>
 
-        <?php foreach ($funcionarios as $funcionario): ?>
+        <?php foreach ($dados as $funcionario): ?>
             <tr>
                 <td><?= escapar($funcionario->getId()) ?></td>
                 <td><?= escapar($funcionario->getNome()) ?></td>

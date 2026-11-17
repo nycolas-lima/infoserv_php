@@ -6,7 +6,7 @@
 
 <br><br>
 
-<?php if (empty($usuarios)): ?>
+<?php if (empty($dados)): ?>
     <p>Nenhum usuário encontrado.</p>
 <?php else: ?>
     <table border="1" cellpadding="8">
@@ -19,7 +19,7 @@
             <th>Ações</th>
         </tr>
 
-        <?php foreach ($usuarios as $usuario): ?>
+        <?php foreach ($dados as $usuario): ?>
             <tr>
                 <td><?= escapar($usuario->getId()) ?></td>
                 <td><?= escapar($usuario->getNomeDeUsuario()) ?></td>

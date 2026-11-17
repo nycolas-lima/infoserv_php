@@ -21,9 +21,15 @@ class FuncionarioController extends BaseController
             $this->mensagemErro("Erro ao listar funcionários: " . $erro->getMessage());
         }
 
-        $this->view("funcionario/listar", [
-            "funcionarios" => $funcionarios,
-        ]);
+        $dados["pagina"] = "funcionario/listar";
+        $dados["titulo"] = "Sistema Infoserv - Funcionários";
+        $dados["dados"] = $funcionarios;
+
+        $this->view("principal", $dados);
+
+        // $this->view("funcionario/listar", [
+        //     "funcionarios" => $funcionarios,
+        // ]);
     }
 
     public function novo(): void
@@ -31,7 +37,7 @@ class FuncionarioController extends BaseController
         $this->view("funcionario/form", [
             "titulo" => "Novo funcionário",
             "action" => url("/funcionarios"),
-            "funcionario" => new FuncionarioEntity(),
+            "funcionario" => new FuncionarioEntity(),''
         ]);
     }
 
