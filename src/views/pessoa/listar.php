@@ -6,7 +6,7 @@
   <div class="card-body">
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPessoa">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalPessoa">
     Cadastrar Pessoa
     </button>
 
@@ -38,7 +38,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-success">Salvar</button>
         </div>
         </div>
     </div>
