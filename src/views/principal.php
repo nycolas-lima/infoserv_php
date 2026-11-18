@@ -1,4 +1,4 @@
-<?php 
+<?php
     /** @var mixed $pagina */
     /** @var string $titulo */
     /** @var array $dados */
@@ -37,12 +37,11 @@
             </li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Relatórios
             </a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Pessoas</a></li>
                 <li><a class="dropdown-item" href="#">Funcionários</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Usuários</a></li>
             </ul>
             </li>
