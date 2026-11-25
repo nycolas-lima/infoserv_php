@@ -1,3 +1,5 @@
+<script src="<?= PUBLIC_ASSETS ?>/js/pessoas.js"></script>
+
 <h1>Pessoas</h1>
 
 <?php renderizarFlashMessages(); ?>
@@ -6,16 +8,16 @@
   <div class="card-body">
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalPessoa">
+    <button id="cadastrarPessoa" type="button" class="btn btn-success cadastrarPessoa" data-bs-toggle="modal" data-bs-target="#modalPessoa">
     Cadastrar Pessoa
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalPessoa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalPessoa" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h1 class="titulo-modal-pessoa modal-title fs-5" id="exampleModalLabel">Cadastrar Pessoa</h1>
+            <h1 class="titulo-modal-pessoa modal-title fs-5" id="tituloModal">Cadastrar Pessoa</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" class="col-auto">
@@ -49,7 +51,7 @@
     <?php if (empty($dados)): ?>
         <p>Nenhuma pessoa encontrada.</p>
     <?php else: ?>
-        <table class="table table-striped table-light table-hover rounded-3 overflow-hidden w-auto">
+        <table id="tabelaPessoas" class="table table-striped table-light table-hover rounded-3 overflow-hidden w-auto">
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -67,8 +69,8 @@
                     <td><?= escapar($pessoa->getEmail()) ?></td>
                     <td><?= escapar($pessoa->getTelefone()) ?></td>
                     <td>
-                    <button type="button" class="btn btn-warning">Editar</button>
-                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button value="<?= escapar($pessoa->getId()) ?>" type="button" class="btn btn-warning btnEditar">Editar</button>
+                    <button value="<?= escapar($pessoa->getId()) ?>" type="button" class="btn btn-danger btnExcluir">Excluir</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
