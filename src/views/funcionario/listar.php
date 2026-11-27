@@ -88,7 +88,7 @@
 
         <?php else: ?>
 
-            <table id="tabelaFuncionarios" class="table table-striped table-light table-hover rounded-3 overflow-hidden w-auto">
+            <table id="tabelaFuncionarios" class="table table-striped table-hover rounded-3 overflow-hidden w-auto">
 
                 <tr>
                     <th>ID</th>
