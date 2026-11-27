@@ -4,7 +4,6 @@ class PessoaEntity
 {
     private ?int $id = null;
     private string $nome = "";
-    private string $sobrenome = "";
     private string $email = "";
     private float $telefone = 0;
 
@@ -23,7 +22,6 @@ class PessoaEntity
 
         $this->id = isset($dados->id) ? (int) $dados->id : $this->id;
         $this->nome = $dados->nome ?? $this->nome;
-        $this->sobrenome = $dados->sobrenome ?? $this->sobrenome;
         $this->email = $dados->email ?? $this->email;
         $this->telefone = isset($dados->telefone) && $dados->telefone !== "" ? (float) $dados->telefone : $this->telefone;
     }
@@ -32,7 +30,6 @@ class PessoaEntity
     {
         return [
             "nome" => $this->nome,
-            "sobrenome" => $this->sobrenome,
             "email" => $this->email,
             "telefone" => $this->telefone,
         ];
@@ -46,11 +43,6 @@ class PessoaEntity
     public function getNome(): string
     {
         return $this->nome;
-    }
-
-    public function getSobrenome(): string
-    {
-        return $this->sobrenome;
     }
 
     public function getEmail(): string

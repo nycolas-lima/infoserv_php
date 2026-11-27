@@ -34,7 +34,7 @@ CREATE TABLE `funcionario` (
   PRIMARY KEY (`id`),
   KEY `funcionario_pessoa_FK` (`idPessoa`),
   CONSTRAINT `funcionario_pessoa_FK` FOREIGN KEY (`idPessoa`) REFERENCES `pessoa` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (2,'Ariel','Felippi',5000,'Professor','Tecnologia','1233',1),(3,'Maria','Silva',4000,'Funcionária','Tecnologia','1234',2),(5,'Lucas','Alves',3500,'Aluno','Medicina','1235',3),(6,'Joana','Carvalho',7800,'Aluna','Medicina','1236',4),(7,'Pedro','Rocha',2500,'Instrutor','Administração','7891',NULL);
+INSERT INTO `funcionario` VALUES (2,'Ariel','Felippi',132456789,'Professor','Educação','4560',1),(3,'Maria','Silva',45612312,'Professora','Educação','4565',4),(4,'Fulano','Borges',45612,'Zelador','Administrativo','3852',NULL),(5,'Pedro','Santana',456789123,'Diretor','Educação','00123',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,11 +57,10 @@ DROP TABLE IF EXISTS `pessoa`;
 CREATE TABLE `pessoa` (
   `id` smallint(6) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
-  `sobrenome` varchar(100) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `telefone` varchar(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +69,7 @@ CREATE TABLE `pessoa` (
 
 LOCK TABLES `pessoa` WRITE;
 /*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
-INSERT INTO `pessoa` VALUES (1,'Ariel','Felippi','ariel@gmail.com','54989764529'),(2,'Maria','Silva','maria@gmail.com','54989768867'),(3,'Lucas','Alves','lucas@gmail.com','54912348867'),(4,'Joana','Carvalho','joana@gmail.com','54912397727');
+INSERT INTO `pessoa` VALUES (1,'Ariel','ariel@infoserv.com','54123456789'),(2,'Fulano','fulano@infoserv.com.br','54987654321'),(3,'Pedro','pedro@infoserv.com','54789456789'),(4,'Maria','maria@infoserv.com','54321678893');
 /*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +82,7 @@ DROP TABLE IF EXISTS `usuario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuario` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
-  `nomeDeUsuario` varchar(100) NOT NULL DEFAULT '"',
+  `nomeDeUsuario` varchar(100) NOT NULL DEFAULT '',
   `senha` varchar(1024) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `cadastroCompleto` tinyint(1) NOT NULL DEFAULT 0,
@@ -97,7 +96,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'nycolas_usuario','1234',1,0);
+INSERT INTO `usuario` VALUES (1,'ariel_usuario','1234',1,0);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,4 +113,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-03 20:57:24
+-- Dump completed on 2026-11-03 20:56:50

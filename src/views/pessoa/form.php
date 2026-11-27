@@ -13,15 +13,6 @@
     </div>
 
     <div>
-        <label>Sobrenome</label>
-        <input
-            type="text"
-            name="sobrenome"
-            value="<?= escapar($pessoa->getSobrenome()) ?>"
-        >
-    </div>
-
-    <div>
         <label>Email</label>
         <input
             type="text"
